@@ -1,0 +1,30 @@
+class Calculus {
+
+    int max(int a, int b) {
+        return (a > b) ? a : b;
+    }
+
+    int max(int a, int b, int c) {
+        return max(max(a, b), c);
+    }
+
+    double max(double a, double b) {
+        return (a > b) ? a : b;
+    }
+
+    double max(double a, double b, double c) {
+        return max(max(a, b), c);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+
+        Calculus calc = new Calculus();
+        System.out.println("Max of 10 and 20: " + calc.max(10, 20));
+        System.out.println("Max of 10, 25, 15: " + calc.max(10, 25, 15));
+
+        System.out.println("Max of 5.5 and 9.3: " + calc.max(5.5, 9.3));
+        System.out.println("Max of 2.2, 7.7, 4.4: " + calc.max(2.2, 7.7, 4.4));
+    }
+}
